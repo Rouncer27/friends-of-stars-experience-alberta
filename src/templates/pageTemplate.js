@@ -6,19 +6,19 @@ import SEO from "../components/SEO"
 
 import ComponentGroups from "../components/ComponentGroups"
 
-const IndexPage = props => {
+const PageTemplate = props => {
   const { components } = props.data
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Page Template" />
       <ComponentGroups components={components} />
     </Layout>
   )
 }
 
-export const homeQuery = graphql`
-  {
-    components: wpPage(slug: { eq: "home" }) {
+export const pageTempQuery = graphql`
+  query pageTempPage($id: String!) {
+    components: wpPage(id: { eq: $id }) {
       acfPageComponents {
         pageComponents {
           ... on WpPage_Acfpagecomponents_PageComponents_IntroSection {
@@ -54,38 +54,10 @@ export const homeQuery = graphql`
               altText
             }
           }
-
-          ... on WpPage_Acfpagecomponents_PageComponents_Sponsors {
-            fieldGroupName
-            mainSectionTitle
-            sponsorLevel {
-              fieldGroupName
-              levelLogo {
-                linkUrl
-                linkOption
-                fieldGroupName
-                logo {
-                  altText
-                  localFile {
-                    childImageSharp {
-                      fluid(maxWidth: 600) {
-                        ...GatsbyImageSharpFluid_withWebp
-                      }
-                    }
-                  }
-                }
-              }
-              levelTitle
-            }
-          }
-
-          ... on WpPage_Acfpagecomponents_PageComponents_Experiences {
-            fieldGroupName
-            showExperienceList
-          }
         }
       }
     }
   }
 `
-export default IndexPage
+
+export default PageTemplate
