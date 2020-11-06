@@ -142,6 +142,17 @@ const FooterStyled = styled.footer`
         text-align: center;
       }
     }
+
+    &__navigation {
+      width: 100%;
+      margin-top: 5rem;
+
+      a,
+      span {
+        ${B1White};
+        text-align: center;
+      }
+    }
   }
 
   .backgroundOverlay {
@@ -239,6 +250,11 @@ const Footer = props => {
                   </a>
                 )
               })}
+            </div>
+            <div className="footerContent__navigation">
+              <Link to="/privacy-policy">Privacy Policy</Link>
+              <span>{" | "}</span>
+              <Link to="/disclaimer">Disclaimer</Link>
             </div>
           </div>
           <div className="footerContent__copy">

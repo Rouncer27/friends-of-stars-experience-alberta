@@ -4,11 +4,10 @@ import IntroSection from "./Groups/IntroSection"
 import Callout from "./Groups/Callout"
 import Experiences from "./Groups/Experiences"
 import Sponsors from "./Groups/Sponsors"
+import ContentEditor from "./Groups/ContentEditor"
 
 const ComponentGroups = props => {
   const { components } = props
-  console.log("ComponentGroups: ", components)
-
   const allPageComponents =
     components?.acfPageComponents?.pageComponents?.length > 0 ? (
       <>
@@ -23,6 +22,8 @@ const ComponentGroups = props => {
                 return <Sponsors key={index} data={component} />
               case "page_Acfpagecomponents_PageComponents_Experiences":
                 return <Experiences key={index} />
+              case "page_Acfpagecomponents_PageComponents_ContentEditor":
+                return <ContentEditor key={index} data={component} />
               default:
                 return (
                   <p>Cannot find this component {component.fieldGroupName}</p>

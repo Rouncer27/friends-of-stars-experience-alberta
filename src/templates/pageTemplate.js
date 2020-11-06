@@ -54,6 +54,39 @@ export const pageTempQuery = graphql`
               altText
             }
           }
+
+          ... on WpPage_Acfpagecomponents_PageComponents_Sponsors {
+            fieldGroupName
+            mainSectionTitle
+            sponsorLevel {
+              fieldGroupName
+              levelLogo {
+                linkUrl
+                linkOption
+                fieldGroupName
+                logo {
+                  altText
+                  localFile {
+                    childImageSharp {
+                      fluid(maxWidth: 600) {
+                        ...GatsbyImageSharpFluid_withWebp
+                      }
+                    }
+                  }
+                }
+              }
+              levelTitle
+            }
+          }
+
+          ... on WpPage_Acfpagecomponents_PageComponents_Experiences {
+            fieldGroupName
+            showExperienceList
+          }
+          ... on WpPage_Acfpagecomponents_PageComponents_ContentEditor {
+            fieldGroupName
+            content
+          }
         }
       }
     }

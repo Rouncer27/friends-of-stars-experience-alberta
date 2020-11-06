@@ -83,6 +83,10 @@ export const homeQuery = graphql`
             fieldGroupName
             showExperienceList
           }
+          ... on WpPage_Acfpagecomponents_PageComponents_ContentEditor {
+            fieldGroupName
+            content
+          }
         }
       }
     }
