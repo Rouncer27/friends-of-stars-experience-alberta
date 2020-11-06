@@ -252,6 +252,8 @@ const Footer = props => {
               })}
             </div>
             <div className="footerContent__navigation">
+              <Link to="/">Home</Link>
+              <span>{" | "}</span>
               <Link to="/privacy-policy">Privacy Policy</Link>
               <span>{" | "}</span>
               <Link to="/disclaimer">Disclaimer</Link>

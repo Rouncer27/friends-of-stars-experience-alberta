@@ -28,7 +28,7 @@ const Experience = props => {
   calloutData.ticketDate = experience?.experienceFields?.expInsideDrawDateText
 
   return (
-    <Layout>
+    <Layout location={props?.location?.pathname}>
       <SEO title="Page Template" />
       <Intro data={introData} />
       <AllPackages packages={packages} />

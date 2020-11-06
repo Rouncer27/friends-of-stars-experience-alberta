@@ -9,7 +9,7 @@ import ComponentGroups from "../components/ComponentGroups"
 const IndexPage = props => {
   const { components } = props.data
   return (
-    <Layout>
+    <Layout location={props?.location?.pathname}>
       <SEO title="Home" />
       <ComponentGroups components={components} />
     </Layout>

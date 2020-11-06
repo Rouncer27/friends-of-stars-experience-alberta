@@ -9,7 +9,7 @@ import ComponentGroups from "../components/ComponentGroups"
 const PageTemplate = props => {
   const { components } = props.data
   return (
-    <Layout>
+    <Layout location={props?.location?.pathname}>
       <SEO title="Page Template" />
       <ComponentGroups components={components} />
     </Layout>

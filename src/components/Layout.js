@@ -4,9 +4,16 @@ import { ThemeProvider } from "styled-components"
 
 import theme from "../styles/theme/Theme"
 import GlobalStyle from "../styles/global/Golbal"
+import Header from "./Header"
 import Footer from "./Footer"
 
-const Layout = ({ children }) => {
+const Layout = props => {
+  const children = props.children
+
+  const headerNeeded =
+    props.location === "/privacy-policy" || props.location === "/disclaimer"
+  console.log(headerNeeded)
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -21,6 +28,7 @@ const Layout = ({ children }) => {
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
+        {headerNeeded && <Header />}
         <main>{children}</main>
         <Footer />
       </ThemeProvider>
