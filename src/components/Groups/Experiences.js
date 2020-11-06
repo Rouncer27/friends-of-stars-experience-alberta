@@ -33,7 +33,12 @@ const getData = graphql`
 const ExperiencesStyled = styled.section``
 
 const ExperienceCard = styled.div`
+  margin-bottom: 5rem;
   background-color: ${props => (props.reversed ? "#fff" : "#e6e6e6")};
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
 
   .cardWrapper {
     ${medWrapper};
@@ -76,6 +81,14 @@ const ExperienceCard = styled.div`
 
     a {
       ${Btn1Dark};
+    }
+
+    .cardLink {
+      margin-bottom: 5rem;
+
+      @media (min-width: 768px) {
+        margin-bottom: 0;
+      }
     }
   }
 
