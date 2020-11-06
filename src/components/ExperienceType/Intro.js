@@ -27,8 +27,9 @@ const IntroSectionStyled = styled.section`
 
   .mainLogo {
     width: calc(100%);
-    max-width: 40rem;
+    max-width: 35rem;
     margin-right: auto;
+    margin-bottom: 2rem;
     margin-left: 0;
   }
 

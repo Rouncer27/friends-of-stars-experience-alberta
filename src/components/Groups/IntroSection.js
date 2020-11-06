@@ -36,6 +36,7 @@ const IntroSectionStyled = styled.section`
   );
   .introContainer {
     position: relative;
+
     @media (min-width: 768px) {
       width: calc(60% - 4rem);
       margin-right: 4rem;
@@ -43,9 +44,22 @@ const IntroSectionStyled = styled.section`
   }
 
   .introImages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+
     @media (min-width: 768px) {
       width: calc(40% - 4rem);
       margin-left: 4rem;
+    }
+
+    &__image {
+      width: 50%;
+
+      @media (min-width: 768px) {
+        width: 100%;
+      }
     }
   }
 
@@ -54,9 +68,11 @@ const IntroSectionStyled = styled.section`
   }
 
   .mainLogo {
-    @media (min-width: 768px) {
-      width: calc(100%);
-    }
+    width: calc(100%);
+    max-width: 35rem;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    margin-left: 0;
   }
 
   .mainTitle {
@@ -107,7 +123,7 @@ const IntroSection = props => {
         <div className="introImages">
           {images.map((img, i) => {
             return (
-              <div key={i}>
+              <div className="introImages__image" key={i}>
                 <Img
                   fluid={img?.image?.localFile?.childImageSharp?.fluid}
                   alt={img?.image?.altText}
