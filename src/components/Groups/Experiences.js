@@ -103,7 +103,7 @@ const ExperienceCard = styled.div`
 
 const Experiences = () => {
   const data = useStaticQuery(getData)
-  const experArray = data.experiences?.edges?.reverse()
+  const experArray = data.experiences?.edges
 
   return (
     <ExperiencesStyled>

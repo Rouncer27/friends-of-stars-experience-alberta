@@ -4,8 +4,6 @@ import styled from "styled-components"
 import { H4Green, medWrapper } from "../../styles/helpers"
 
 const SponsorsStyled = styled.section`
-  background-color: #e6e6e6;
-
   .wrapper {
     ${medWrapper};
   }
