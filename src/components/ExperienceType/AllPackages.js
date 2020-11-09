@@ -1,7 +1,13 @@
 import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import { B1DarkBlue, H3Dark, H4Green, medWrapper } from "../../styles/helpers"
+import {
+  B1DarkBlue,
+  B3Dark,
+  H3Dark,
+  H4Green,
+  medWrapper,
+} from "../../styles/helpers"
 
 const AllPackagesStyled = styled.section`
   .wrapper {
@@ -51,6 +57,14 @@ const PackageStyled = styled.div`
 
     a {
       ${B1DarkBlue};
+    }
+
+    &__value {
+      p {
+        ${B3Dark};
+        margin: 0;
+        text-transform: uppercase;
+      }
     }
   }
 
@@ -136,6 +150,9 @@ const AllPackages = ({ packages }) => {
                     className="packContent__content"
                     dangerouslySetInnerHTML={{ __html: pack?.content }}
                   />
+                  <div className="packContent__value">
+                    <p>All Valued At ${pack?.value}</p>
+                  </div>
                 </div>
                 <div className="packSponsors">
                   <div className="packSponsors__title">
@@ -143,7 +160,6 @@ const AllPackages = ({ packages }) => {
                   </div>
                   <div className="packSponsors__logos">
                     {pack?.sponsors?.map((spon, index) => {
-                      console.log(spon)
                       const displayLogo = spon?.linkRequired ? (
                         <a target="_blank" rel="noreferrer" href={spon?.url}>
                           <Img
