@@ -4,6 +4,7 @@ import styled from "styled-components"
 import {
   B1DarkBlue,
   B3Dark,
+  colors,
   H3Dark,
   H4Green,
   medWrapper,
@@ -57,6 +58,12 @@ const PackageStyled = styled.div`
 
     a {
       ${B1DarkBlue};
+      font-weight: bold;
+      text-decoration: underline;
+
+      &:hover {
+        color: ${colors.colorPrimary};
+      }
     }
 
     &__value {
