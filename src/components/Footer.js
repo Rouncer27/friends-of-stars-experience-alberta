@@ -261,7 +261,14 @@ const Footer = props => {
           </div>
           <div className="footerContent__copy">
             <p>
-              {" "}
+              Website built and donated by{" "}
+              <a
+                rel="noreferrer"
+                target="_blank"
+                href="https://switchbackcreative.ca/"
+              >
+                Switchback Creative
+              </a>{" "}
               © {new Date().getFullYear()}, Built with
               {` `}
               <a href="https://www.gatsbyjs.com">Gatsby</a>

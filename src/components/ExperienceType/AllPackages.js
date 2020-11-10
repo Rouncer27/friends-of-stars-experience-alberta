@@ -28,6 +28,9 @@ const PackageStyled = styled.div`
   width: 100%;
 
   .packImages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
     width: 100%;
 
     @media (min-width: 768px) {
@@ -36,7 +39,13 @@ const PackageStyled = styled.div`
     }
 
     &__image {
-      margin-bottom: 1rem;
+      width: calc(50% - 2rem);
+      margin: 1rem;
+
+      @media (min-width: 768px) {
+        width: calc(100%);
+        margin-bottom: 1rem;
+      }
     }
   }
 
@@ -101,13 +110,13 @@ const PackageStyled = styled.div`
     }
 
     &__logos {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      justify-content: flex-start;
       width: 100%;
 
       @media (min-width: 768px) {
-        display: flex;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        justify-content: flex-start;
         width: calc(80%);
       }
     }
@@ -116,8 +125,8 @@ const PackageStyled = styled.div`
 
 const LogoStyled = styled.div`
   align-self: center;
-  width: calc(50% - 6rem);
-  margin: 2rem 3rem;
+  width: calc(33.33% - 2rem);
+  margin: 2rem 1rem;
 
   @media (min-width: 768px) {
     width: calc(20% - 4rem);
