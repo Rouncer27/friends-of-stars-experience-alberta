@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import { H4Green, medWrapper } from "../../styles/helpers"
+import { colors, H1Dark, H4Green, medWrapper } from "../../styles/helpers"
 
 const SponsorsStyled = styled.section`
   .wrapper {
@@ -12,13 +12,16 @@ const SponsorsStyled = styled.section`
 const SponsorLevel = styled.div`
   width: 100%;
   margin-bottom: 5rem;
+  padding-bottom: 5rem;
+  border-bottom: 0.5rem solid ${colors.colorSecondary};
 
   .levelTitle {
     width: 100%;
     text-align: center;
 
     h2 {
-      ${H4Green};
+      ${H1Dark};
+      color: ${colors.colorSecondary};
     }
   }
 
