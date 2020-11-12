@@ -34,6 +34,56 @@ const IntroSectionStyled = styled.section`
     #fff 70rem,
     #fff 100%
   );
+
+  @media (min-width: 768px) {
+    background: linear-gradient(
+      to top,
+      rgba(100, 102, 107, 0.11) 0%,
+      rgba(100, 102, 107, 0.11) 70rem,
+      #fff 70rem,
+      #fff 100%
+    );
+  }
+  @media (min-width: 1025px) {
+    background: linear-gradient(
+      to top,
+      rgba(100, 102, 107, 0.11) 0%,
+      rgba(100, 102, 107, 0.11) 60rem,
+      #fff 60rem,
+      #fff 100%
+    );
+  }
+
+  @media (min-width: 1130px) {
+    background: linear-gradient(
+      to top,
+      rgba(100, 102, 107, 0.11) 0%,
+      rgba(100, 102, 107, 0.11) 62.5rem,
+      #fff 62.5rem,
+      #fff 100%
+    );
+  }
+
+  @media (min-width: 1200px) {
+    background: linear-gradient(
+      to top,
+      rgba(100, 102, 107, 0.11) 0%,
+      rgba(100, 102, 107, 0.11) 65rem,
+      #fff 65rem,
+      #fff 100%
+    );
+  }
+
+  @media (min-width: 1400px) {
+    background: linear-gradient(
+      to top,
+      rgba(100, 102, 107, 0.11) 0%,
+      rgba(100, 102, 107, 0.11) 68%,
+      #fff 68%,
+      #fff 100%
+    );
+  }
+
   .introContainer {
     position: relative;
 
