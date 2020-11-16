@@ -17,7 +17,7 @@ const Layout = props => {
         <GlobalStyle />
         {headerNeeded && <Header />}
         <main>{children}</main>
-        <Footer />
+        <Footer location={props.location} />
       </ThemeProvider>
     </>
   )

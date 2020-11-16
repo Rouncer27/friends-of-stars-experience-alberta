@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import { colors, H1Dark, H4Green, medWrapper } from "../../styles/helpers"
+import { colors, H1Dark, medWrapper } from "../../styles/helpers"
 
 const SponsorsStyled = styled.section`
   .wrapper {

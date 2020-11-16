@@ -235,6 +235,7 @@ const Footer = props => {
           <div className="footerContent__social">
             <div className="footerContent__social--title">
               <p>Follow & Share</p>
+              <p>#experiencealbertawithSTARS</p>
             </div>
             <div className="footerContent__social--icons">
               {socialLinks.map((social, index) => {
@@ -252,8 +253,12 @@ const Footer = props => {
               })}
             </div>
             <div className="footerContent__navigation">
-              <Link to="/">Home</Link>
-              <span>{" | "}</span>
+              {props.location !== "/" && (
+                <>
+                  <Link to="/">Home</Link>
+                  <span>{" | "}</span>
+                </>
+              )}
               <Link to="/privacy-policy">Privacy Policy</Link>
               <span>{" | "}</span>
               <Link to="/disclaimer">Disclaimer</Link>

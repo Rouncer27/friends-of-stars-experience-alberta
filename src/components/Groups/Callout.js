@@ -53,9 +53,6 @@ const CalloutStyled = styled.section`
 
 const Callout = props => {
   const { title, content, icon } = props.data
-
-  console.log(icon)
-
   return (
     <CalloutStyled>
       <div className="wrapper">
