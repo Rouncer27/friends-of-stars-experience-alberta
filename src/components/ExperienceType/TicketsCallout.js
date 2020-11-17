@@ -58,7 +58,7 @@ const TicketsCallout = ({ data }) => {
             <h2>{data?.ticketPrice}</h2>
             <p>{data?.ticketDate}</p>
             <a target="_blank" rel="noreferrer" href={data?.ticketUrl}>
-              Buy your family fun tickets!
+              Buy your {data?.title} tickets!
             </a>
           </div>
         </div>

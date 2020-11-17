@@ -21,6 +21,7 @@ const Experience = props => {
   const packages = experience?.experienceFields?.expInsideExperiences
 
   const calloutData = {}
+  calloutData.title = experience.title
   calloutData.ticketUrl =
     experience?.experienceFields?.expInsideBuyYourTicketUrl
   calloutData.ticketPrice =
