@@ -35,6 +35,11 @@ const IntroSectionStyled = styled.section`
 
   .mainTitle {
     width: calc(100%);
+    text-align: center;
+
+    @media (min-width: 768px) {
+      text-align: left;
+    }
 
     h2 {
       ${H1Dark};
@@ -44,7 +49,27 @@ const IntroSectionStyled = styled.section`
 
   .mainLink {
     width: calc(100%);
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      text-align: left;
+    }
+
+    a {
+      ${Btn1Dark};
+    }
+  }
+
+  .backLink {
+    width: calc(100%);
     margin-bottom: 5rem;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      text-align: left;
+    }
 
     a {
       ${Btn1Dark};
@@ -57,9 +82,25 @@ const IntroSectionStyled = styled.section`
     }
 
     &__header {
+      text-align: center;
+
+      @media (min-width: 768px) {
+        text-align: left;
+      }
+
       h2 {
         ${H1Dark};
         text-transform: uppercase;
+      }
+    }
+
+    &__wysiwyg {
+      p {
+        text-align: center;
+
+        @media (min-width: 768px) {
+          text-align: left;
+        }
       }
     }
   }
@@ -85,6 +126,9 @@ const Intro = ({ data }) => {
             <a rel="noreferrer" target="_blank" href={data?.ticketUrl}>
               Buy Your Tickets
             </a>
+          </div>
+          <div className="backLink">
+            <Link to="/">Back To All Experiences</Link>
           </div>
         </div>
         <div className="introImages">

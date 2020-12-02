@@ -51,8 +51,12 @@ const FooterStyled = styled.footer`
       text-align: center;
 
       &--title {
-        width: calc(50% - 4rem);
-        margin-right: 4rem;
+        width: calc(60% - 2rem);
+        margin-right: 2rem;
+
+        @media (min-width: 768px) {
+          width: calc(50% - 4rem);
+        }
 
         p {
           ${B1White};
@@ -65,19 +69,32 @@ const FooterStyled = styled.footer`
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
-        width: calc(50%);
+        width: calc(40%);
+
+        @media (min-width: 768px) {
+          width: calc(50%);
+        }
 
         .socialIcon {
           display: flex;
           align-items: center;
           justify-content: center;
           position: relative;
-          width: 6rem;
-          height: 6rem;
+          width: 5rem;
+          height: 5rem;
+          margin-top: 1rem;
           margin-right: 1rem;
+          margin-bottom: 1rem;
           margin-left: 1rem;
           border-radius: 50%;
           overflow: hidden;
+
+          @media (min-width: 768px) {
+            width: 6rem;
+            height: 6rem;
+            margin-top: auto;
+            margin-bottom: auto;
+          }
 
           &:hover {
             background-color: ${colors.colorSecondary};
@@ -87,18 +104,25 @@ const FooterStyled = styled.footer`
             align-self: center;
             position: relative;
             width: 100%;
-            height: 6rem;
+            height: 5rem;
 
             &::after {
               position: absolute;
               top: 50%;
               left: 50%;
               transform: translate(-50%, -50%);
-              font-size: 3rem;
+              font-size: 2.5rem;
               color: ${colors.white};
               text-align: center;
               font-family: ${fonts.fontAwesome};
               content: "";
+            }
+
+            @media (min-width: 768px) {
+              height: 6rem;
+              &::after {
+                font-size: 3rem;
+              }
             }
           }
 

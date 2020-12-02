@@ -80,6 +80,12 @@ const PackageStyled = styled.div`
         ${B3Dark};
         margin: 0;
         text-transform: uppercase;
+
+        @media (max-width: 767px) {
+          margin-bottom: 0;
+          font-size: 2rem;
+          text-align: center;
+        }
       }
     }
   }
@@ -90,10 +96,11 @@ const PackageStyled = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    margin-top: 5rem;
+    margin-top: 1rem;
 
     @media (min-width: 768px) {
       width: calc(100%);
+      margin-top: 5rem;
     }
 
     &__title {
@@ -106,6 +113,12 @@ const PackageStyled = styled.div`
 
       h3 {
         ${H4Green};
+
+        @media (max-width: 767px) {
+          margin-bottom: 0;
+          font-size: 3.4rem;
+          text-align: center;
+        }
       }
     }
 
