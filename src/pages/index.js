@@ -10,7 +10,10 @@ const IndexPage = props => {
   const { components } = props.data
   return (
     <Layout location={props?.location?.pathname}>
-      <SEO title="Home" />
+      <SEO
+        title="Friends of Stars Experience Alberta - You could WIN an exciting Experience Alberta Package!"
+        description="Friends of STARS Experience Alberta is a group of Benevolent and Community conscious Albertans who want to keep STARS in the air and at the same time support Alberta Tourism and Raise the Spirits of Albertans."
+      />
       <ComponentGroups components={components} />
     </Layout>
   )
