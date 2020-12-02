@@ -55,13 +55,13 @@ module.exports = {
       },
     },
     `gatsby-plugin-sitemap`,
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: "UA-159608309-1",
-    //     head: true,
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "G-TP9JNKTSG1",
+        head: true,
+      },
+    },
     // {
     //   resolve: `gatsby-plugin-netlify`,
     //   options: {
