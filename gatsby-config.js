@@ -3,9 +3,12 @@ dotenv.config({ path: ".env" })
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Friends of Stars Experience Alberta`,
+    description: `Friends of Stars Experience Alberta. You could WIN an exciting Experience Alberta Package! Albertans Supporting Stars!`,
+    author: `@switchback4ever`,
+    metaImg: `src/images/default-meta-min.png`,
+    siteLogo: `src/images/freinds-of-stars-experience-alberta.jpg`,
+    siteUrl: `https://friendsofstarsexperiencealberta.com/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -28,7 +31,7 @@ module.exports = {
         background_color: `#d5001b`,
         theme_color: `#d5001b`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`,
       },
     },
     {
@@ -37,8 +40,47 @@ module.exports = {
         url: process.env.WORDPRESS_URL,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://friendsofstarsexperiencealberta.com/",
+        sitemap: "https://friendsofstarsexperiencealberta.com/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://friendsofstarsexperiencealberta.com/`,
+      },
+    },
+    `gatsby-plugin-sitemap`,
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: "UA-159608309-1",
+    //     head: true,
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-plugin-netlify`,
+    //   options: {
+    //     mergeSecurityHeaders: false,
+    //     headers: {
+    //       "/*": [
+    //         "cache-control: public,max-age=60",
+    //         "X-Frame-Options: sameorigin",
+    //         "X-XSS-Protection: 1; mode=block",
+    //         "X-Content-Type-Options: nosniff",
+    //         "Feature-Policy: camera 'none'; geolocation 'none'; microphone 'none'",
+    //       ],
+    //       "/**/*.html": ["cache-control: public, max-age=300"],
+    //       "/static/*": ["cache-control: public, max-age=31536000, immutable"],
+    //       "/*.js": ["cache-control: public, max-age=31536000, immutable"],
+    //       "/*.css": ["cache-control: public, max-age=31536000, immutable"],
+    //       "/sw.js": ["cache-control: public, max-age=0, must-revalidate"],
+    //     },
+    //   },
+    // },
   ],
 }
